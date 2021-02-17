@@ -6,5 +6,6 @@ target 'Flix2.0' do
   use_frameworks!
 
   # Pods for Flix2.0
+  pod "AlamofireImage"
 
 end
