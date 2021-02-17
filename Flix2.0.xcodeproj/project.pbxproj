@@ -13,6 +13,7 @@
 		69A5E47F25DC98CC009360CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A5E47D25DC98CC009360CC /* Main.storyboard */; };
 		69A5E48125DC98D0009360CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A5E48025DC98D0009360CC /* Assets.xcassets */; };
 		69A5E48425DC98D0009360CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A5E48225DC98D0009360CC /* LaunchScreen.storyboard */; };
+		69B1BA9F25DCDC8200127CEF /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B1BA9E25DCDC8200127CEF /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		69A5E48025DC98D0009360CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69A5E48325DC98D0009360CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69A5E48525DC98D0009360CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69B1BA9E25DCDC8200127CEF /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		69A5E47625DC98CC009360CC /* Flix2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				69B1BA9E25DCDC8200127CEF /* MovieCell.swift */,
 				69A5E47725DC98CC009360CC /* AppDelegate.swift */,
 				69A5E47925DC98CC009360CC /* SceneDelegate.swift */,
 				69A5E47B25DC98CC009360CC /* MoviesViewController.swift */,
@@ -139,6 +142,7 @@
 			files = (
 				69A5E47C25DC98CC009360CC /* MoviesViewController.swift in Sources */,
 				69A5E47825DC98CC009360CC /* AppDelegate.swift in Sources */,
+				69B1BA9F25DCDC8200127CEF /* MovieCell.swift in Sources */,
 				69A5E47A25DC98CC009360CC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
