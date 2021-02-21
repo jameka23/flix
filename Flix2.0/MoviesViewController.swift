@@ -34,10 +34,7 @@ class MoviesViewController: UIViewController,UITableViewDataSource, UITableViewD
            } else if let data = data {
               let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
               print(dataDictionary)
-              // TODO: Get the array of movies
-              // TODO: Store the movies in a property to use elsewhere
-              // TODO: Reload your table view data
-              
+
               // casting
             self.movies = dataDictionary["results"] as! [[String:Any]]
             
@@ -68,6 +65,16 @@ class MoviesViewController: UIViewController,UITableViewDataSource, UITableViewD
         cell.synopsisLabel.text = synopsis
         
         return cell
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            // sender is the cell that was clicked {movie cell}
+        let cell = sender as! UITableViewCell
+        let indexPath =  tableView.indexPath(for: cell)!
+        //find the selected movie
+        // pass data to the details view controller
+        
     }
 }
 
