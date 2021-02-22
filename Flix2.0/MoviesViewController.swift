@@ -75,6 +75,11 @@ class MoviesViewController: UIViewController,UITableViewDataSource, UITableViewD
         //find the selected movie
         // pass data to the details view controller
         
+        let movie = movies[indexPath.row]
+        let detailVeiwController = segue.destination as! MoviesDetailViewController
+        
+        detailVeiwController.movie = movie
+        
     }
 }
 
