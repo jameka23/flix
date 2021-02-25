@@ -22,10 +22,10 @@ class MoviesGridViewController: UIViewController, UICollectionViewDataSource, UI
         collectionsView.delegate = self
         
         let layout = collectionsView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.minimumLineSpacing = 40 // controlss the space in between the rows ( 40px between row)
-        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 4 // controlss the space in between the rows ( 40px between row)
+        layout.minimumInteritemSpacing = 4
         
-        let width = view.frame.size.width / 3
+        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 3
         
         
         layout.itemSize = CGSize(width: width, height: width * 1.5)
