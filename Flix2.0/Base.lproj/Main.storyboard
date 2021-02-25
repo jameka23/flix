@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -139,11 +140,11 @@
             </objects>
             <point key="canvasLocation" x="-142" y="1256"/>
         </scene>
-        <!--Item-->
+        <!--Now Playing-->
         <scene sceneID="eCY-2X-x0n">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hzl-17-zDS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ThG-lX-Wa7"/>
+                    <tabBarItem key="tabBarItem" title="Now Playing" image="now_playing_tabbar_item" id="ThG-lX-Wa7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wDJ-dC-If3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -158,27 +159,49 @@
             </objects>
             <point key="canvasLocation" x="-142" y="-145"/>
         </scene>
-        <!--View Controller-->
+        <!--Superhero-->
         <scene sceneID="A2T-wA-ScH">
             <objects>
-                <viewController id="Pmc-72-n1S" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="56r-3u-dhJ">
+                <viewController id="Pmc-72-n1S" customClass="MoviesGridViewController" customModule="Flix2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="5Wo-p9-2er">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="USv-zD-Tcu"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="1eE-Di-1Uj"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="d5r-nh-NiZ">
+                            <size key="itemSize" width="193" height="240"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieGridCell" id="hB6-Qd-dsG" customClass="MovieGridCell" customModule="Flix2_0" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="193" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="D1C-4M-Y0D">
+                                    <rect key="frame" x="0.0" y="0.0" width="193" height="240"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RB6-8J-n3I">
+                                            <rect key="frame" x="8" y="0.0" width="185" height="232"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="193" height="240"/>
+                            </collectionViewCell>
+                        </cells>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Superhero" id="1eE-Di-1Uj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2pO-kW-86T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1584.057971014493" y="-145.3125"/>
         </scene>
-        <!--Item-->
+        <!--Superhero-->
         <scene sceneID="e6c-ve-TmI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pm0-mt-0Ah" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="j5w-vr-bEh"/>
+                    <tabBarItem key="tabBarItem" title="Superhero" image="superhero_tabbar_item" id="j5w-vr-bEh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pOC-cX-Bml">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -195,6 +218,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="now_playing_tabbar_item" width="21" height="21"/>
+        <image name="superhero_tabbar_item" width="21" height="23"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
